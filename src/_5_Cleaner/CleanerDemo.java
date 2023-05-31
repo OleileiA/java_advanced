@@ -14,6 +14,10 @@ public class CleanerDemo {
     /*
     * 本程序中，我们创建了一个Book类，实现了Runnable多线程接口。
     * 将此线程对象注入Cleaner, 最后随着try-with-resources语句块的结束，线程对象会被自动回收。
+    *
+    * Runnable接口中的run()方法在调用Thread类的start()方法后，会在新的线程中执行。
+    * 具体来说，当一个线程的start()方法被调用时，该线程会在新的、独立的线程中启动，
+    * 并且会自动调用其关联的Runnable对象的run()方法。这个run()方法就是该线程的执行体，它在启动线程后会被执行到。
     * */
     public static void main(String[] args) {
         Book book = new Book();
